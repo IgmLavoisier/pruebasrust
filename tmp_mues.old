@@ -1,7 +1,0 @@
-//@@@@@@@@@@
-//asignacion tipo 1
-fn main(){
-    let a;
-    a="holaaaa".to_string();
-    print!("ehhh {} \n",a);
-}
