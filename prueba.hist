@@ -1,0 +1,1527 @@
+//@@@@@@@@@@
+fn main(){
+    let a;
+    a="holaaaa".to_string();
+    print!("ehhh {} \n",a);
+}
+//@@@@@@@@@@
+fn main(){
+    let a;
+    a="holaaa";
+    println!("como?{}",&a);
+}
+//@@@@@@@@@@
+fn main(){
+    let a=String::from("holaaa");
+    print!("{}",a);
+}
+//@@@@@@@@@@
+fn main(){
+    let a=String::from("holaaa");
+    let s=vec![1,2,3,4,5];
+
+    print!("{}",&a);
+    print!("{}",s[0]);
+}
+//@@@@@@@@@@
+fn main(){
+    let s:Vec<u32>=vec![1,2,3,4,5];
+
+    print!("{}\n",s[0]);
+}
+//@@@@@@@@@@
+fn main(){
+    let s:Vec<u8>=vec![1,2,3,4,9];
+
+    print!("{}\n",s[4]);
+}
+//@@@@@@@@@@
+fn main(){
+    let a=String::from("holaaa");
+    let s:Vec<u32>=vec![1,2,3,4,9];
+
+    print!("{}\n",&a);
+    print!("{}\n",s[4]);
+    for i in s.iter(){
+        print!("{}\n" , i );
+
+    }
+}
+//@@@@@@@@@@
+fn main() {
+    let a = "hola";
+    print!("{} \n", a);
+}
+//@@@@@@@@@@
+fn main() {
+    let _s: Vec<u32> = vec![1, 2, 3];
+}
+//@@@@@@@@@@
+fn main() {
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+}
+//@@@@@@@@@@
+fn main() {
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+
+    let x: i32;
+}
+//@@@@@@@@@@
+fn main() {
+
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+
+    {
+        let x: i32 = 55;
+        print!("{} \n", x);
+    }
+
+    for i in 1..100 {
+        print!("{} \n", i);
+    }
+}
+//@@@@@@@@@@
+fn main() {
+
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+
+    let mut x: i32 = 55;
+    print!("{} \n", x);
+
+    for i in 1..100 {
+        x = i;
+        print!("{} \n", i);
+    }
+    print!("{} \n", x);
+}
+//@@@@@@@@@@
+fn main() {
+
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+
+    let mut x: i32 = 55;
+    print!("{} \n", x);
+
+    {
+    for i in 1..100 {
+        x = i;
+        print!("{} \n", i);
+    }
+    }
+    print!("{} \n", x);
+}
+//@@@@@@@@@@
+fn main() {
+
+
+    let mut x: i32 = 55;
+    print!("{} \n", x);
+
+    let interior: i32 = 666;
+    {
+        let interior: i32 = 555;
+        for i in 1..100 {
+            x = i;
+            print!("{} \n", i);
+        }
+    }
+    print!("{}   por queeee  \n", x);
+    print!("{}   por queeee  \n", interior);
+}
+//@@@@@@@@@@
+fn main() {
+    let a = "hola";
+    print!("{} \n", a);
+
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+
+    let mut x: i32 = 55;
+    print!("{} \n", x);
+
+    let interior: i32 = 666;
+    {
+        let interior: i32 = 555;
+        for i in 1..100 {
+            x = i;
+            print!("{} {} \n", i, interior);
+        }
+    }
+    print!("{}  por que\n", x);
+    print!("{}  por que\n", interior);
+}
+//@@@@@@@@@@
+fn main() {
+    struct Animal {
+        patas: u32,
+        cuernos: bool,
+    }
+
+    let vaca: Animal = Animal {
+        patas: 4,
+        cuernos: true,
+    };
+
+    print!(" patitas:{}   cuernos:{}\n", vaca.patas, vaca.cuernos);
+}
+//@@@@@@@@@@
+fn main() {
+    struct Animal {
+        patas: u32,
+        cuernos: bool,
+    }
+
+    let vaca: Animal = Animal {
+        patas: 4,
+        cuernos: true,
+    };
+
+    print!(" patitas:{}   cuernos:{}\n", vaca.patas, vaca.cuernos);
+
+    let arca: Vec<Animal>;
+    //= vec!<Animal> ;
+}
+//@@@@@@@@@@
+fn main() {
+    struct Animal {
+        patas: u32,
+        cuernos: bool,
+    }
+
+    let vaca: Animal = Animal {
+        patas: 4,
+        cuernos: true,
+    };
+
+    print!(" patitas:{}   cuernos:{}\n", vaca.patas, vaca.cuernos);
+
+    let arca: [Animal; 10];
+    //= vec!<Animal> ;
+}
+//@@@@@@@@@@
+fn main() {
+    struct Animal {
+        patas: u32,
+        cuernos: bool,
+    }
+
+    let vaca: Animal = Animal {
+        patas: 4,
+        cuernos: true,
+    };
+
+    print!(" patitas:{}   cuernos:{}\n", vaca.patas, vaca.cuernos);
+
+    let arca: [Animal; 2] = [
+        Animal {
+            patas: 3,
+            cuernos: true,
+        },
+        Animal {
+            patas: 2,
+            cuernos: false,
+        },
+    ];
+    //= vec!<Animal> ;
+    print!("{}", arca[0].patas);
+}
+//@@@@@@@@@@
+fn main() {
+    struct Animal {
+        patas: u32,
+        cuernos: bool,
+    }
+
+    let vaca: Animal = Animal {
+        patas: 4,
+        cuernos: true,
+    };
+
+    print!(" patitas:{}   cuernos:{}\n", vaca.patas, vaca.cuernos);
+
+    let arca: [Animal; 2] = [
+        Animal {
+            patas: 3,
+            cuernos: true,
+        },
+        Animal {
+            patas: 2,
+            cuernos: false,
+        },
+    ];
+    //= vec!<Animal> ;
+    print!("patinas={}\n", arca[0].patas);
+}
+//@@@@@@@@@@
+// prueba escribir fichero
+use std::fs::File;
+use std::io::prelude::*;
+
+fn main() -> std::io::Result<()> {
+    let mut file = File::create("foo.txt")?;
+    file.write_all(b"Hello, world!")?;
+    Ok(())
+}
+//@@@@@@@@@@
+// prueba    leer  fichero
+use std::fs::File;
+use std::io::prelude::*;
+
+fn main() -> std::io::Result<()> {
+    let mut contenido = String::new();
+    let mut file = File::open("foo.txt")?;
+    file.read_to_string(&mut contenido)?;
+    print!("{}\n", contenido);
+    Ok(())
+}
+//@@@@@@@@@@
+// prueba    leer  fichero  read_to_String
+use std::fs;
+
+fn main() -> std::io::Result<()> {
+    let mut contenido = String::new();
+    contenido = fs::read_to_string("foo.txt").expect("leiste");
+    print!("{}\n", contenido);
+    Ok(())
+}
+//@@@@@@@@@@
+// prueba    leer  fichero  read_to_String sin tipo
+use std::fs;
+
+fn main() -> std::io::Result<()> {
+    let contenido; // = String::new();
+    contenido = fs::read_to_string("foo.txt").expect("leiste");
+    print!("{}\n", contenido);
+    Ok(())
+}
+//@@@@@@@@@@
+use std::fs;
+
+fn main() {
+    let contenido: String;
+    contenido = fs::read_to_string("foo.txt").expect("caguenla");
+    print!("{}\n", contenido);
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufReader;
+//use std::io::Read;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let mut file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let mut contenido = BufReader::new(file);
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let mut contenido = BufReader::new(file);
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let mut contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(err) => panic!("plof"),
+        };
+        println!("{}", lin);
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(err) => panic!("plof"),
+        };
+        println!("{}", lin);
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        println!("{}", &lin[0..0]);
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        println!("{}", &lin[0..1]);
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        println!("{}", lin.len());
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        if lin.len() > 0 {
+            println!("{}", &lin[0..1]);
+        }
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        if lin.len() > 0 {
+            match &lin[0..1] {
+                "-" => println!("{}", &lin[0..1]),
+                &_ => todo!(),
+            }
+        }
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        if lin.len() > 0 {
+            match &lin[0..1] {
+                "-" => println!("{}", &lin[0..1]),
+                &_ => (),
+            }
+        }
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        if lin.len() > 0 {
+            //match &lin[0..1] {
+            //    "-" => println!("{}", &lin[0..1]),
+            //    &_ => (),
+            //}
+        }
+    }
+}
+//@@@@@@@@@@
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() {
+    let st_fd1 = File::open("prueba.hist");
+    let file = match st_fd1 {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let contenido = BufReader::new(file);
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(linea) => linea,
+            Err(_err) => panic!("plof"),
+        };
+        if lin.len() > 0 {
+            //match &lin[0..1] {
+            //    "-" => println!("{}", &lin[0..1]),
+            //    &_ => (),
+            //}
+            if &lin[0..1] == "-" {
+                println!("{}", &lin[0..1]);
+            };
+        }
+    }
+}
+//@@@@@@@@@@
+//  leer desde linea de comandos
+use std::io::stdin;
+
+fn main() {
+    let mut entra = String::new();
+    stdin().read_line(&mut entra);
+    print!("hola:{}", &entra);
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let mut entra = String::new();
+    print!("intro");
+    stdin().read_line(&mut entra).expect("que esta pasando?");
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let a = [0, 1, 2, 3, 4, 5, 66];
+    print!("{}", a[0]);
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let a = [100050, 1, 2, 3, 4, 5, 66];
+    print!("{}", a[0]);
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let a = [100050, 1, 2, 3, 4, 5, 66];
+    println!("{}", a[0]);
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let a = [100050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+       println!("{}", a[0]);
+    }
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let a = [100050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+       println!("{}", i);
+    }
+}
+//@@@@@@@@@@
+use std::io::stdin;
+
+fn main() {
+    let a = [100050, 1, 2, 3, 4, 5, 66];
+    let s = a.into_iter();
+
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+}
+//@@@@@@@@@@
+
+fn main() {
+    println!("{}", 333);
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{} ", i);
+    }
+
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{:x} ", i);
+    }
+
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{:b} ", i);
+    }
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{:X} ", i);
+    }
+
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{:>10} ", i);
+    }
+}
+//@@@@@@@@@@
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{:>010} ", i);
+    }
+
+}
+//@@@@@@@@@@
+//use std::io::stdin;
+
+fn main() {
+    let a: Vec<u32> = vec![1050, 1, 2, 3, 4, 5, 66];
+    for i in a {
+        println!("{i:>010} ");
+    }
+
+}
+//@@@@@@@@@@
+fn main() {
+    let i: i8 = 0;
+    for i in 0..20 {
+        println!("{}", i);
+    }
+}
+//@@@@@@@@@@
+fn main() {
+    let i: String = String::from("hola");
+    for i in 0..200000 {
+        println!("{}", i);
+    }
+}
+//@@@@@@@@@@
+
+fn main() {
+    let i: String = String::from("hola");
+        println!("{}", i);
+}
+//@@@@@@@@@@
+
+fn main() {
+    let i: String = String::from("hola");
+    println!("{}", &i);
+}
+//@@@@@@@@@@
+
+fn main() {
+    let i: String = String::from("hola");
+    println!("{}", i + "1");
+}
+//@@@@@@@@@@
+
+fn main() {
+    let mut i: String = String::from("hola");
+    i = i + " toma";
+    println!("{}", i + " que raro");
+}
+//@@@@@@@@@@
+
+fn main() {
+    let mut i: String = String::from("hola esto es una prueba chunga");
+    println!("{}", i.len());
+}
+//@@@@@@@@@@
+
+fn main() {
+    let mut i: String = String::from("hola esto es una prueba chunga");
+    println!("{}", &i[..4]);
+}
+//@@@@@@@@@@
+
+fn main() {
+    let h = 4;
+    let mut i: String = String::from("hola esto es una prueba chunga");
+    println!("{}", &i[..h]);
+}
+//@@@@@@@@@@
+
+fn main() {
+    let h = 14;
+    let mut i: String = String::from("hola esto es una prueba chunga");
+    println!("{}", &i[3..h]);
+}
+//@@@@@@@@@@
+fn main() {
+// prueba  string a chars
+    let h = 14;
+    let mut i: String = String::from("hola esto es una prueba chunga");
+    for n in i.chars() {
+        println!("{}", n);
+    }
+}
+//@@@@@@@@@@
+// prueba filter
+fn main() {
+    let h = 14;
+    let mut i: String = String::from("hola esto es una prueba chunga");
+    for n in i.chars().filter(|x| x == &'e') {
+        println!("{}", n);
+    }
+}
+//@@@@@@@@@@
+
+// prueba filter
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga");
+    for n in i.chars().filter(|x| x == &'e') {
+        println!("{}", n);
+    }
+}
+//@@@@@@@@@@
+// prueba filter split collect
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga");
+    println!(
+        "{:?}",
+        i.split_whitespace()
+            .filter(|x| x.contains("pr"))
+            .collect::<String>()
+    );
+}
+//@@@@@@@@@@
+// prueba filter split collect
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    println!(
+        "{:?}",
+        i.split_whitespace()
+            .filter(|x| x.contains("pr"))
+            .collect::<String>()
+    );
+}
+//@@@@@@@@@@
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    println!(
+        "{}",
+        i.split_whitespace()
+            .filter(|x| x.contains("pr"))
+            //.map(|&x| x)
+            //.into_iter()
+            .collect::<String>() //.join(".")
+    );
+}
+//@@@@@@@@@@
+// prueba filter map
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    for n in i.split_whitespace() {
+        println!("{:?}", n);
+        /*
+        .filter(|x| x.contains("pr"))
+        .map(|&x| x+".")
+        //.into_iter()
+        //.collect::<String>()
+        //.join(".")
+
+        */
+    }
+}
+//@@@@@@@@@@
+// prueba filter split contains
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    for n in i.split_whitespace().filter(|x| x.contains("pr")) {
+        println!("{:?}", n);
+        /*
+        //.map(|&x| x+".")
+        //.into_iter()
+        //.collect::<String>()
+        //.join(".")
+
+        */
+    }
+}
+//@@@@@@@@@@
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    let n: String = i.split_whitespace().filter(|x| x.contains("pr")).collect();
+    println!("{:?}", n);
+    /*
+    //.map(|&x| x+".")
+    //.into_iter()
+    //.collect::<String>()
+    //.join(".")
+
+    */
+}
+//@@@@@@@@@@
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    let n: String = i.split_whitespace().clone().filter(|x| x.contains("pr"))
+    .collect::<Vec<&str>>()
+    .join(",")
+  //  .interperse('.').collect();
+   ;
+    println!("{:?}", n);
+    /*
+    //.into_iter()
+    //.collect::<String>()
+    //.join(".")
+
+    */
+}
+//@@@@@@@@@@
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    let n: String = i
+        .split_whitespace()
+        .clone()
+        .filter(|x| x.contains("pr"))
+        .collect::<Vec<&str>>()
+        .join(",");
+    println!("{:?}", n);
+}
+//@@@@@@@@@@
+fn main() {
+    let i: String = String::from("hola esto es una prueba chunga y reprobable");
+    let n: String = i
+        .split_whitespace()
+        //        .clone()
+        .filter(|x| x.contains("pr"))
+        .collect::<Vec<&str>>()
+        .join(",");
+    println!("{:?}", n);
+}
+//@@@@@@@@@@@@
+fn main() {
+    let x: [i32; 5] = [1, 2, 3, 4, 5];
+}
+//@@@@@@@@@@@@
+fn main() {
+    let x: [i32; 5] = [1, 2, 3, 4, 5];
+    print!("{} \n", x[1]);
+}
+//@@@@@@@@@@@@
+fn main() {
+    let x = vec![0..100];
+    println!("{:?}", x[1]);
+}
+//@@@@@@@@@@@@
+fn fun(hola: String) {
+    println!("{}", hola);
+}
+
+fn main() {
+    let x = vec![0..100];
+    println!("{:?}", x[1]);
+
+    let k = String::from("elacabose");
+    fun(k);
+}
+//@@@@@@@@@@@@
+fn fun(hola: String) {
+    println!("{}", hola);
+}
+
+fn main() {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    println!("{:?}", x[1]);
+
+    let k = String::from("elacabose");
+    fun(k);
+}
+//@@@@@@@@@@@@
+fn fun(hola: String) {
+    println!("{}", hola);
+}
+
+fn main() {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    println!("{:?}", x[1]);
+
+    let k: String = String::from("elacabose");
+    fun(k);
+}
+//@@@@@@@@@@@@
+fn fun(hola: String) {
+    println!("{}", hola);
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    println!("{:?}", x[1]);
+    &x[3..7];
+}
+
+fn main() {
+
+    let k: String = String::from("elacabose");
+    fun(k);
+}
+//@@@@@@@@@@@@
+fn fun(hola: String) {
+    println!("{}", hola);
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    println!("{:?}", x[1]);
+    &x[3..7];
+}
+
+fn main() {
+    let k: String = String::from("elacabose");
+    println!("{:?} ", fun(k));
+}
+//@@@@@@@@@@@@
+fn fun() -> Vec<u32> {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    return x;
+}
+
+fn main() {
+    println!("{:?} ", fun());
+}
+//@@@@@@@@@@@@
+fn fun() -> Vec<u32> {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    return x[3..6].to_vec();
+}
+
+fn main() {
+    println!("{:?} ", fun());
+}
+//@@@@@@@@@@@@
+fn fun() -> Vec<u32> {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    return x[3..6].to_vec();
+}
+
+fn main() {
+    let y: Vec<u32> = fun();
+    println!("{:?} ", y);
+}
+//@@@@@@@@@@@@
+fn fun() -> Vec<u32> {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    return x[3..6].to_vec();
+}
+
+fn main() {
+    let mut y: Vec<u32> = fun();
+    y[1] = 555;
+    println!("{:?} ", y);
+}
+//@@@@@@@@@@@@
+fn fun(x: Vec<u32>) -> Vec<u32> {
+    let mut z = vec![];
+    for i in x {
+        if i == 3 {
+            print!("tres ");
+            z.push(3);
+        }
+    }
+    return z;
+}
+
+fn main() {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    let mut y: Vec<u32> = fun(x);
+    println!("{:?} ", y);
+}
+//@@@@@@@@@@@@
+fn fun(x: Vec<u32>) -> Vec<u32> {
+    let mut z = vec![];
+    for i in x {
+        if i == 3 {
+            z.push(3);
+        }
+    }
+    return z;
+}
+
+fn main() {
+    let x = vec![2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+    let y: Vec<u32> = fun(x);
+    println!("{:?} ", y);
+}
+//@@@@@@@@@@@@
+fn fun(x: Vec<u32>) -> Vec<u32> {
+    let mut z = vec![];
+    for i in x {
+        if i == 3 {
+            z.push(3);
+        }
+    }
+    return z;
+}
+
+fn main() {
+    let x = vec![2, 2, 2, 2, 3, 3, 3,  4, 4, 4, 4];
+    let y: Vec<u32> = fun(x);
+    println!("{:?} ", y);
+}
+//@@@@@@@@@@@@
+
+fn main() {
+    let x = "HolA";
+    println!("{:?} ", x.to_lowercase());
+}
+//@@@@@@@@@@@@
+fn main() {
+    let x = "HolA.";
+    println!("{:?} ", x.to_lowercase().replace('.', " "));
+}
+//@@@@@@@@@@@@
+fn main() {
+    let x = String::from("HolA.");
+
+    println!("{:?} ", x);
+}
+//@@@@@@@@@@@@
+// prueba borrow
+fn main() {
+    let x = String::from("HolA.");
+    let y = x;
+
+    println!("{:?} ", y);
+}
+//@@@@@@@@@@@@
+// prueba clone
+fn main() {
+    let x = String::from("HolA.");
+    let y = x.clone();
+
+    println!("{} {} ", x, y);
+}
+//@@@@@@@@@@@@
+fn funcion(g: String) {
+    println!("{} ", g);
+}
+fn main() {
+    let x = String::from("HOLA.");
+
+    funcion(x);
+}
+//@@@@@@@@@@@@
+// prueba prestamo en funciones
+fn funcion(g: String) -> String {
+    println!("{} ", g);
+    return (g);
+}
+
+fn main() {
+    let mut x = String::from("HOLA.");
+
+    x = funcion(x);
+
+    println!("{} ", x);
+}
+//@@@@@@@@@@@@
+// prueba prestamo en funciones REFERENCIAS
+fn funcion(g: &String) {
+    println!("{} ", g);
+}
+
+fn main() {
+    let mut x = String::from("HOLA.");
+
+    funcion(&x);
+
+    println!("{} ", x);
+}
+//@@@@@@@@@@@@
+// prueba prestamo en funciones REFERENCIAS
+fn funcion(g: &String) {
+    println!("{} ", g);
+}
+
+fn main() {
+    let x = String::from("HOLA.");
+
+    funcion(&x);
+
+    println!("{} ", x);
+}
+//@@@@@@@@@@@@
+// prueba prestamo en funciones REFERENCIAS modificando el prestamo
+fn funcion(g: &mut String) {
+    g.push_str(" mamon");
+}
+
+fn main() {
+    let mut x = String::from("HOLA.");
+    funcion(&mut x);
+    println!("{} ", x);
+}
+//@@@@@@@@@@@@
+// programa que hizo chat.openai.com
+//use std::collections::HashMap;
+//use std::fs::File;
+//use std::io::{BufRead, BufReader};
+//
+fn main() -> Result<(), std::io::Error> {
+    //    let file = File::open("file.txt")?;
+    //    let reader = BufReader::new(file);
+    //
+    //    let mut word_counts = HashMap::new();
+    //
+    //    let count = 0;
+    //    for line in reader.lines() {
+    //        let line = line?;
+    //        for word in line.split_whitespace() {
+    //            count = *word_counts.entry(word).or_insert(0);
+    //            *count += 1;
+    //        }
+    //    }
+    //
+    //    println!("{:?}", word_counts);
+    //
+    Ok(())
+}
+//@@@@@@@@@@@@
+// programa que hizo chat.openai.com
+//use std::collections::HashMap;
+use std::fs::File;
+//use std::io::{BufRead, BufReader};
+//
+fn main() -> Result<(), std::io::Error> {
+    //fn main() {
+    let file = File::open("file.txt")?;
+    //    let reader = BufReader::new(file);
+    //
+    //    let mut word_counts = HashMap::new();
+    //
+    //    let count = 0;
+    //    for line in reader.lines() {
+    //        let line = line?;
+    //        for word in line.split_whitespace() {
+    //            count = *word_counts.entry(word).or_insert(0);
+    //            *count += 1;
+    //        }
+    //    }
+    //
+    //    println!("{:?}", word_counts);
+    //
+    Ok(())
+}
+//@@@@@@@@@@@@
+fn main() {
+    let hola = 1;
+    let salida = match hola {
+        1 => "uno",
+        2 => "dos",
+        _ => "esto es un error",
+    };
+
+    println!("{} {} ", hola, salida);
+}
+//@@@@@@@@@@@@
+//  prueba match hay que poner _ porque tienen que estar todas las posiblidades del tipo de la
+//  entrada
+fn main() {
+    let hola = 1;
+    let salida = match hola {
+        1 => "uno",
+        2 => "dos",
+        _ => "esto es un error",
+    };
+
+    println!("{} {} ", hola, salida);
+}
+//@@@@@@@@@@@@
+//  prueba match hay que poner _ porque tienen que estar todas las posiblidades del tipo de la
+//  entrada
+fn main() {
+    let hola = 221;
+    let salida = match hola {
+        1 => "uno",
+        2 => "dos",
+        _ => "esto es un error",
+    };
+
+    println!("{} {} ", hola, salida);
+}
+//@@@@@@@@@@@@
+fn main() {
+    let texto = "hola esto es una, prueba, una caca, como un mar";
+
+    println!("{} ", texto.replace(",", " "));
+}
+//@@@@@@@@@@@@
+//  prueba de replace
+fn main() {
+    let texto: &str = "hola esto es una, prueba, una caca, como un mar";
+
+    println!("{:?} ", &texto[1..5]);
+}
+//@@@@@@@@@@@@
+//  prueba cadenas
+fn main() {
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+
+    for dato in lista {
+        let dat = dato.split(":");
+        for da in dat {
+            println!("{:?} ", da);
+        }
+    }
+}
+//@@@@@@@@@@@@
+//  prueba cadenas
+fn main() {
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+
+    for dato in lista {
+        let mut dat = dato.split(":");
+        println!("{:?} ", dat.next());
+    }
+}
+//@@@@@@@@@@@@
+//  prueba cadenas
+fn main() {
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+
+    for dato in lista {
+        let mut dat = dato.split(":");
+        println!("{:?} {:?} ", dat.next(), dat.next());
+    }
+}
+//@@@@@@@@@@@@
+//  prueba prestamos
+fn main() {
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+
+    for dato in lista {
+        let mut dat = dato.split(":");
+        println!("{:?} {:?} ", &(dat.next()), &(dat.next()));
+    }
+}
+//@@@@@@@@@@@@
+//  prueba prestamos
+fn main() {
+    let mut recuerdos: Vec<(String, String)> = Vec::new();
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+    lista.push(String::from("judas"));
+
+    for dato in lista {
+        let mut dat = dato.split(":");
+        let nombre: String;
+        let pastas: String;
+        match dat.next() {
+            None => nombre = String::from("oooooohhh"),
+            Some(no) => nombre = String::from(no),
+        }
+        match dat.next() {
+            None => pastas = String::from("oooooohhh"),
+            Some(no) => pastas = String::from(no),
+        }
+        println!("{:?} {:?} ", nombre, pastas);
+        recuerdos.push((nombre, pastas));
+    }
+    println!("{:#?}", recuerdos);
+}
+//@@@@@@@@@@@@23-12-2022,viernes
+//  prueba split a vector enteros y string
+fn main() {
+    let mut recuerdos: Vec<(String, i32)> = Vec::new();
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+    lista.push(String::from("judas"));
+
+    for dato in lista {
+        let nombre: String;
+        let pastas: i32;
+        let mut dat = dato.split(":").map(|x| x.to_string());
+        match dat.next() {
+            None => nombre = String::from("oooooohhh"),
+            Some(no) => nombre = String::from(no),
+        }
+        match dat.next() {
+            None => pastas = 0,
+            Some(no) => pastas = no.parse::<i32>().unwrap(),
+        }
+        recuerdos.push((nombre, pastas));
+    }
+    println!("{:#?}", recuerdos);
+}
+//@@@@@@@@@@@@24-12-2022,sábado
+//  prueba split a vector enteros y string
+use std::collections::HashMap;
+fn main() {
+    let mut recuerdos = HashMap::new();
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+    lista.push(String::from("judas"));
+
+    for dato in lista {
+        let nombre: String;
+        let pastas: i32;
+        let mut dat = dato.split(":").map(|x| x.to_string());
+        match dat.next() {
+            None => nombre = String::from("oooooohhh"),
+            Some(no) => nombre = String::from(no),
+        }
+        match dat.next() {
+            None => pastas = 0,
+            Some(no) => pastas = no.parse::<i32>().unwrap(),
+        }
+        recuerdos.insert(nombre, pastas);
+    }
+    println!("{:#?}", recuerdos);
+}
+//@@@@@@@@@@@@24-12-2022,sábado
+//  prueba split a hashmap enteros y string
+use std::collections::HashMap;
+
+fn funfun(fi: i32, mapa: HashMap<String, i32>) {
+    for (k1, v1) in mapa.clone() {
+        for (k2, v2) in mapa.clone() {
+            if v1 + v2 == fi {
+                println!("{}={:?}+{:?}", fi, k1, k2);
+            }
+        }
+    }
+}
+
+fn main() {
+    let mut recuerdos = HashMap::new();
+    let mut lista: Vec<String> = Vec::new();
+    lista.push(String::from("pepe:2"));
+    lista.push(String::from("toni:3"));
+    lista.push(String::from("mario:5"));
+    lista.push(String::from("judas"));
+
+    for dato in lista {
+        let nombre: String;
+        let pastas: i32;
+        let mut dat = dato.split(":").map(|x| x.to_string());
+        match dat.next() {
+            None => nombre = String::from("oooooohhh"),
+            Some(no) => nombre = String::from(no),
+        }
+        match dat.next() {
+            None => pastas = 0,
+            Some(no) => pastas = no.parse::<i32>().unwrap(),
+        }
+        recuerdos.insert(nombre, pastas);
+    }
+    println!("{:#?}\n\n\n", recuerdos);
+    funfun(7, recuerdos);
+}
+//@@@@@@@@@@@@08-01-2023,domingo
+// calcula coordenadas de puntos alrededor de un punto con radio 30
+use std::thread;
+fn main() {
+    let n = 0;
+    let mut rad: f64;
+    for m in 1..10 {
+        for n in 1..40 {
+            rad = n as f64 * 3.14 / 20.0;
+            println!(
+                " {} {} {} ",
+                rad,
+                200 + (30.0 * rad.sin()) as i32,
+                200 + (30.0 * rad.cos()) as i32
+            );
+
+            thread::sleep_ms(20);
+        }
+    }
+}
+//@@@@@@@@@@@@11-01-2023,miércoles
+// prueba  fichero a lista
+use std::fs;
+
+fn main() -> std::io::Result<()> {
+    let mut lista: Vec<String> = Vec::new();
+    for linea in fs::read_to_string("../pruebasrust/prueba.hist") {
+        lista.push(linea);
+    }
+    for linea in lista {
+        print!("{}\n", linea);
+    }
+
+    Ok(())
+}
+//@@@@@@@@@@@@12-01-2023,jueves
+// prueba lista de listas
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() -> std::io::Result<()> {
+    let st = File::open("../pruebasrust/prueba.hist");
+    let mut lista: Vec<String> = Vec::new();
+
+    let file = match st {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let mut contenido = BufReader::new(file);
+
+    let mut paque: Vec<Vec<String>> = Vec::new();
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(fff) => fff,
+            Err(fff) => panic!("horror"),
+        };
+        if lin.contains("@@@") {
+            paque.push(lista);
+            lista = Vec::new();
+            println!("tomaaaa");
+        }
+        lista.push(lin);
+    }
+
+    for pac in paque {
+        for linea in pac {
+            println!("{}", linea);
+        }
+        println!("=========================");
+    }
+
+    Ok(())
+}
+<ulti>//@@@@@@@@@@@@17-03-2023,viernes
+<ulti>fn main() {
+<ulti>    let mut x = 100;
+<ulti>    while x > 0 {
+<ulti>        println!("hola mundo {}", x);
+<ulti>        x = x - 1;
+<ulti>    }
+<ulti>}

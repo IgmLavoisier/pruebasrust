@@ -1,0 +1,39 @@
+//@@@@@@@@@@@@12-01-2023,jueves
+// prueba lista de listas
+use std::fs::File;
+use std::io::BufRead;
+use std::io::BufReader;
+
+fn main() -> std::io::Result<()> {
+    let st = File::open("../pruebasrust/prueba.hist");
+    let mut lista: Vec<String> = Vec::new();
+
+    let file = match st {
+        Ok(ffff) => ffff,
+        Err(err) => panic!("no existe fichero {} ", err),
+    };
+    let mut contenido = BufReader::new(file);
+
+    let mut paque: Vec<Vec<String>> = Vec::new();
+    for linea in contenido.lines() {
+        let lin = match linea {
+            Ok(fff) => fff,
+            Err(fff) => panic!("horror"),
+        };
+        if lin.contains("@@@") {
+            paque.push(lista);
+            lista = Vec::new();
+            println!("tomaaaa");
+        }
+        lista.push(lin);
+    }
+
+    for pac in paque {
+        for linea in pac {
+            println!("{}", linea);
+        }
+        println!("=========================");
+    }
+
+    Ok(())
+}

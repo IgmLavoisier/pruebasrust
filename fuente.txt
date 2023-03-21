@@ -1,0 +1,23 @@
+fn main() {
+    let a = "hola";
+    print!("{} \n", a);
+
+    let s: Vec<u32> = vec![1, 2, 3];
+    for i in s {
+        print!("{} \n", i);
+    }
+
+    let mut x: i32 = 55;
+    print!("{} \n", x);
+
+    let interior: i32 = 666;
+    {
+        let interior: i32 = 555;
+        for i in 1..100 {
+            x = i;
+            print!("{} {} \n", i, interior);
+        }
+    }
+    print!("{}   por queeee  \n", x);
+    print!("{}   por queeee  \n", interior);
+}
