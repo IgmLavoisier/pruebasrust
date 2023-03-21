@@ -1,7 +1,17 @@
+// funcion y enum.
+
 fn main() {
-    let mut x = 100;
-    while x > 0 {
-        println!("hola mundo {}", x);
-        x = x - 1;
+    enum Miembro {
+        Mano,
+        Pie,
     }
+
+    fn otromiembro(entrada: Miembro) {
+        match entrada {
+            Miembro::Pie => print!(" esto es un pie "),
+            _ => print!(" esto es otro pene "),
+        }
+    }
+
+    otromiembro(Miembro::Mano);
 }

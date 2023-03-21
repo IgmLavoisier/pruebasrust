@@ -1,4 +1,6 @@
 //@@@@@@@@@@
+//@@@@@@@@@@
+//asignacion tipo 1
 fn main(){
     let a;
     a="holaaaa".to_string();
@@ -1517,11 +1519,39 @@ fn main() -> std::io::Result<()> {
 
     Ok(())
 }
-<ulti>//@@@@@@@@@@@@17-03-2023,viernes
+//@@@@@@@@@@@21-03-2023,martes
+// funcion y enum
+
+fn main() {
+    enum Miembro {
+        Mano,
+        Pie,
+    }
+
+    fn otromiembro(entrada: Miembro) {
+        match entrada {
+            Miembro::Pie => print!(" esto es un pie "),
+            _ => print!(" esto es otro pene "),
+        }
+    }
+
+    otromiembro(Miembro::Mano);
+}
+<ulti>//@@@@@@@@@@@21-03-2023,martes
+<ulti>// funcion y enum.
+<ulti>
 <ulti>fn main() {
-<ulti>    let mut x = 100;
-<ulti>    while x > 0 {
-<ulti>        println!("hola mundo {}", x);
-<ulti>        x = x - 1;
+<ulti>    enum Miembro {
+<ulti>        Mano,
+<ulti>        Pie,
 <ulti>    }
+<ulti>
+<ulti>    fn otromiembro(entrada: Miembro) {
+<ulti>        match entrada {
+<ulti>            Miembro::Pie => print!(" esto es un pie "),
+<ulti>            _ => print!(" esto es otro pene "),
+<ulti>        }
+<ulti>    }
+<ulti>
+<ulti>    otromiembro(Miembro::Mano);
 <ulti>}

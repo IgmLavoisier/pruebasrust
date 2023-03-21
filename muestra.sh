@@ -1,4 +1,9 @@
 n=1
+if [ $# -eq 0 ]
+then
+   echo "debes de meter algo o . para todo"
+   exit 0
+fi
 datos=$(grep -n @@@@@@@ prueba.hist | cut -d':' -f1)
 while [ true ]
 do
@@ -23,7 +28,8 @@ do
    echo
    cat tmp_mues.rc 
    echo 
-   read -p intro dato
+   echo "intro o d-diff r-retro v-vi b-borrar"
+   read  dato 
    if [ ! -z $dato ]
    then
       case $dato in
@@ -50,6 +56,12 @@ do
         fi
 	;;
       b)
+          da=''
+          while [ -z $da ]
+	  do
+	    echo  "seguro que quieres borrar"
+            read da 
+	  done
           D=$(expr $d - 1)
           sed -n  1,${D}p prueba.hist   >  tmp_mues_1
           sed -n $h,10000p prueba.hist  >> tmp_mues_1
