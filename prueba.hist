@@ -1537,21 +1537,95 @@ fn main() {
 
     otromiembro(Miembro::Mano);
 }
-<ulti>//@@@@@@@@@@@21-03-2023,martes
-<ulti>// funcion y enum.
+//@@@@@@@@@@@03-04-2023,lunes
+// funcion y enum..
+
+fn main() {
+    enum Miembro {
+        Mano,
+        Pie,
+    }
+
+    fn otromiembro(entrada: Miembro) {
+        match entrada {
+            Miembro::Pie => print!(" esto es un pie "),
+            _ => print!(" esto es otro pene "),
+        }
+    }
+
+    otromiembro(Miembro::Mano);
+}
+//@@@@@@@@@@@03-04-2023,lunes
+// struct
+
+fn main() {
+    struct Ar {
+        nombre: String,
+        anonacimiento: i32,
+    }
+
+    let hola = Ar {
+        anonacimiento: 1971,
+        nombre: String::from("holacio"),
+    };
+
+    println!("{} {}", hola.nombre, hola.anonacimiento);
+}
+//@@@@@@@@@@@06-04-2023,jueves
+// struct
+
+fn main() {
+    struct Ar {
+        nombre: String,
+        anonacimiento: i32,
+    }
+
+    let hola = Ar {
+        anonacimiento: 1971,
+        nombre: String::from("holacio"),
+    };
+
+    println!("{} {}", hola.nombre, hola.anonacimiento);
+    impl Ar {
+        fn flu() {
+            print!("que flu!");
+        }
+    }
+}
+<ulti>//@@@@@@@@@@@06-04-2023,jueves
+<ulti>// struct array
 <ulti>
 <ulti>fn main() {
-<ulti>    enum Miembro {
-<ulti>        Mano,
-<ulti>        Pie,
+<ulti>    struct Ar {
+<ulti>        nombre: String,
+<ulti>        anonacimiento: i32,
 <ulti>    }
 <ulti>
-<ulti>    fn otromiembro(entrada: Miembro) {
-<ulti>        match entrada {
-<ulti>            Miembro::Pie => print!(" esto es un pie "),
-<ulti>            _ => print!(" esto es otro pene "),
+<ulti>    let hola = Ar {
+<ulti>        anonacimiento: 1971,
+<ulti>        nombre: String::from("holacio"),
+<ulti>    };
+<ulti>
+<ulti>    println!("{} {}", hola.nombre, hola.anonacimiento);
+<ulti>
+<ulti>    impl Ar {
+<ulti>        fn flu(&self) {
+<ulti>            println!("que flu! {}", self.anonacimiento);
 <ulti>        }
 <ulti>    }
 <ulti>
-<ulti>    otromiembro(Miembro::Mano);
+<ulti>    hola.flu();
+<ulti>
+<ulti>    let mut gente: Vec<Ar> = vec![];
+<ulti>    for i in 0..100 {
+<ulti>        let ho = Ar {
+<ulti>            anonacimiento: 1871 + i,
+<ulti>            nombre: String::from("holacio"),
+<ulti>        };
+<ulti>        gente.push(ho);
+<ulti>    }
+<ulti>
+<ulti>    gente[90].flu();
+<ulti>    gente[90].anonacimiento = 333;
+<ulti>    gente[90].flu();
 <ulti>}
