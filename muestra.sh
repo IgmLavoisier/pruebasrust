@@ -10,6 +10,11 @@ do
    m=$(expr $n + 1)
    d=$(echo $datos | cut -d' ' -f $n)
    h=$(echo $datos | cut -d' ' -f $m)
+   if [ -z $h ]
+   then
+       echo SALGOOOO
+       exit 0
+   fi 
    H=$(expr $h - 1)
    echo "---------- $n -------------- $d $H"
    cp  tmp_mues.rc  tmp_mues.old
@@ -19,7 +24,8 @@ do
       break
    fi 
    n=$m
-   grep -qi $1 tmp_mues.rc  
+   que=$(echo $@ | sed "s/ /.*/g")
+   grep -qi $que tmp_mues.rc  
    if [ $? -eq 1 ]
    then
       continue

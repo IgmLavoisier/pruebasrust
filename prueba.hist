@@ -324,19 +324,6 @@ fn main() {
 //@@@@@@@@@@
 use std::fs::File;
 use std::io::BufReader;
-//use std::io::Read;
-
-fn main() {
-    let st_fd1 = File::open("prueba.hist");
-    let mut file = match st_fd1 {
-        Ok(ffff) => ffff,
-        Err(err) => panic!("no existe fichero {} ", err),
-    };
-    let mut contenido = BufReader::new(file);
-}
-//@@@@@@@@@@
-use std::fs::File;
-use std::io::BufReader;
 
 fn main() {
     let st_fd1 = File::open("prueba.hist");
@@ -384,26 +371,6 @@ fn main() {
             Err(err) => panic!("plof"),
         };
         println!("{}", lin);
-    }
-}
-//@@@@@@@@@@
-use std::fs::File;
-use std::io::BufRead;
-use std::io::BufReader;
-
-fn main() {
-    let st_fd1 = File::open("prueba.hist");
-    let file = match st_fd1 {
-        Ok(ffff) => ffff,
-        Err(err) => panic!("no existe fichero {} ", err),
-    };
-    let contenido = BufReader::new(file);
-    for linea in contenido.lines() {
-        let lin = match linea {
-            Ok(linea) => linea,
-            Err(_err) => panic!("plof"),
-        };
-        println!("{}", &lin[0..0]);
     }
 }
 //@@@@@@@@@@
