@@ -1559,40 +1559,49 @@ fn main() {
         }
     }
 }
-<ulti>//@@@@@@@@@@@06-04-2023,jueves
-<ulti>// struct array
+//@@@@@@@@@@@06-04-2023,jueves
+// struct array
+
+fn main() {
+    struct Ar {
+        nombre: String,
+        anonacimiento: i32,
+    }
+
+    let hola = Ar {
+        anonacimiento: 1971,
+        nombre: String::from("holacio"),
+    };
+
+    println!("{} {}", hola.nombre, hola.anonacimiento);
+
+    impl Ar {
+        fn flu(&self) {
+            println!("que flu! {}", self.anonacimiento);
+        }
+    }
+
+    hola.flu();
+
+    let mut gente: Vec<Ar> = vec![];
+    for i in 0..100 {
+        let ho = Ar {
+            anonacimiento: 1871 + i,
+            nombre: String::from("holacio"),
+        };
+        gente.push(ho);
+    }
+
+    gente[90].flu();
+    gente[90].anonacimiento = 333;
+    gente[90].flu();
+}
+<ulti>//@@@@@@@@@@@15-04-2023,sábado
+<ulti>// argumentos command line
+<ulti>
+<ulti>use std::env;
 <ulti>
 <ulti>fn main() {
-<ulti>    struct Ar {
-<ulti>        nombre: String,
-<ulti>        anonacimiento: i32,
-<ulti>    }
-<ulti>
-<ulti>    let hola = Ar {
-<ulti>        anonacimiento: 1971,
-<ulti>        nombre: String::from("holacio"),
-<ulti>    };
-<ulti>
-<ulti>    println!("{} {}", hola.nombre, hola.anonacimiento);
-<ulti>
-<ulti>    impl Ar {
-<ulti>        fn flu(&self) {
-<ulti>            println!("que flu! {}", self.anonacimiento);
-<ulti>        }
-<ulti>    }
-<ulti>
-<ulti>    hola.flu();
-<ulti>
-<ulti>    let mut gente: Vec<Ar> = vec![];
-<ulti>    for i in 0..100 {
-<ulti>        let ho = Ar {
-<ulti>            anonacimiento: 1871 + i,
-<ulti>            nombre: String::from("holacio"),
-<ulti>        };
-<ulti>        gente.push(ho);
-<ulti>    }
-<ulti>
-<ulti>    gente[90].flu();
-<ulti>    gente[90].anonacimiento = 333;
-<ulti>    gente[90].flu();
+<ulti>    let args: Vec<String> = env::args().collect();
+<ulti>    dbg!(args);
 <ulti>}
