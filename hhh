@@ -1,6 +1,0 @@
-
-fn main() {
-    let st_fd1=File::open("historia,dat");
-
-    print!("{}\n", contenido);
-}
